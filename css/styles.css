@@ -1,0 +1,303 @@
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+  background-color: whitesmoke;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+img {
+  height: 100px;
+}
+
+.menu-icon {
+  height: 1em;
+}
+
+/* HEADER AREA */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.header-logo {
+  height: 45px;
+}
+
+.header-main-menu,
+.header-side-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.menu-item:active {
+  outline: 1px dashed black;
+}
+
+/* FOOTER AREA */
+footer {
+  background-color: deepskyblue;
+}
+
+/* MAIN BANNER AREA */
+.game-banner {
+  height: 600px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(106, 106, 106, 0.2) 100%
+    ),
+    url(../assets/FLOW-no-logo.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  background-color: gold;
+  padding: 6px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: black;
+}
+
+.banner-title,
+.banner-title--small {
+  font-size: 72px;
+  font-weight: 700;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.banner-title--small {
+  font-size: 36px;
+}
+
+.banner-title--small.dark,
+.banner-text.dark {
+  color: black;
+  text-shadow: none;
+}
+
+.title-separator {
+  width: 60px;
+  height: 12px;
+  background-color: lightgreen;
+  box-shadow: 1px 1px 1px black;
+  transform: skew(-45deg);
+  margin: 25px auto;
+}
+
+.banner-tagline {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+.banner-text {
+  font-size: 22px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.buy-now {
+  background-color: rgb(179, 243, 49);
+  color: rgb(41, 97, 4);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 1px black;
+  font-weight: 900;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: rgb(179, 243, 49);
+}
+
+.buy-now:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: rgb(179, 243, 129);
+  text-decoration-color: rgb(41, 97, 4);
+  transition: text-decoration-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* ICON AREA */
+.icon-bar {
+  background-color: whitesmoke;
+  color: green;
+  display: flex;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 690px;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.single-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 40px;
+  justify-content: center;
+  width: 150px;
+  text-decoration: underline;
+  text-decoration-color: whitesmoke;
+}
+
+.single-icon-container:hover {
+  cursor: pointer;
+  text-decoration-color: green;
+  transition: text-decoration-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.icon-text {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.secondary-banner-container {
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-areas:
+    "banner1 banner3"
+    "banner2 banner3"
+    "banner2 banner4";
+  grid-gap: 6px;
+  margin: 6px 0;
+}
+
+.secondary-banner {
+  background-color: silver;
+}
+
+.secondary-banner.content-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.secondary-banner-content-left,
+.secondary-banner-content-right {
+  width: 50%;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(11, 104, 11);
+}
+
+.secondary-banner-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.secondary-banner-left-1 {
+  grid-area: banner1;
+  display: flex;
+}
+
+.secondary-banner-left-1 > .secondary-banner-content-right {
+  height: 400px;
+  background-image: url(../assets/Planes.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.secondary-banner-left-2 {
+  grid-area: banner2;
+  height: 800px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)),
+    url(../assets/Minecraft.png);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.secondary-banner-right-1 {
+  grid-area: banner3;
+  height: 800px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.35)
+    ),
+    url(../assets/Sports-car.png);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.secondary-banner-right-2 {
+  grid-area: banner4;
+  display: flex;
+}
+
+.secondary-banner-right-2 > .secondary-banner-content-right {
+  height: 400px;
+  background-image: url(../assets/Knights.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Social media */
+.social-media-follow {
+  display: flex;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.social-media-icons-container {
+  display: flex;
+  margin: 25px;
+}
+
+.social-media-icons-container > li {
+  line-height: 16px;
+}
+
+.social-media-icons-container img {
+  height: 16px;
+  margin: 0 10px;
+}
